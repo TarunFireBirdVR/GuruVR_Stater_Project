@@ -1,150 +1,116 @@
-🧭 Step-by-Step Guide: Guru VR Metaversity Starter Project
-🗂️ 1. Extract Project Files
-You’ll receive a .zip file of the Guru VR project.
+# 🧭 GuruVR Metaversity Starter Project
 
-Steps:
-Right-click the file → Extract All
+## 📖 Project Description
 
-Choose a destination folder on your system
+The **GuruVR Metaversity Starter Project** is a Unity-based template designed to jumpstart development of immersive, cross-platform VR experiences. Built with scalability and ease-of-use in mind, it supports **Android**, **WebGL**, and **VR headsets like Meta Quest**, and comes pre-integrated with **Photon PUN2** for multiplayer networking.
 
-Wait for extraction to complete
+Whether you're building a collaborative educational platform, a training simulation, or a social multiplayer VR world, this starter kit offers a strong foundation with:
 
-💻 2. Open Project in Unity
-Requirements:
-Unity 2023.3.0f1 (LTS) or compatible version
+- 🎮 Multiplayer-ready setup via Photon PUN2  
+- 🧍 Full-body avatars for immersive VR  
+- 🧪 XR Simulator for desktop testing without a headset  
+- 🧱 Scene management and onboarding UI  
+- ⚙️ Preconfigured build support for Android, WebGL, and VR  
 
-Unity Hub installed
+---
 
-Steps:
-Open Unity Hub
+## 🗂️ 1. Extract Project Files
 
-Click "Open"
+You will receive the project in `.zip` format.
 
-Select "Add project from disk"
+### Steps:
+- Right-click the file → **Extract All**
+- Choose a destination folder
+- Wait for extraction to complete
 
-Navigate to the extracted project folder and select it
+---
 
-Unity will import the project (this may take a few minutes)
+## 💻 2. Open Project in Unity
 
-🏗️ 3. Project Overview
-This template is ready-to-use with the following pre-configured features:
+### Requirements:
+- Unity **6000.0.25f1 (LTS)** or compatible version
+- Unity Hub
 
-Feature	Description
-✅ Multiplayer Support	Photon integration is pre-set for cross-platform networking
-✅ XR Simulator	Simulate VR inputs using keyboard/mouse
-✅ Avatar System	Includes VR full-body avatars and third-person controls
-✅ VR-ready Scene	Optimized for Android VR and PC-based XR
+### Steps:
+1. Open **Unity Hub**
+2. Click **"Open"**
+3. Select **"Add project from disk"**
+4. Navigate to the extracted project folder
+5. Unity will import the project (may take a few minutes)
 
-No need to import additional packages unless extending functionality.
+---
 
-🧪 4. Using the XR Simulator
-The XR Device Simulator is enabled by default for development testing.
+## 🧪 3. Using the XR Simulator
 
-Controls:
-T / Y keys: Simulate controller hand movement
+The XR Device Simulator is enabled by default for development.
 
-Mouse + WASD: Move and look around
+### Controls:
+- `T / Y` keys → Simulate hand/controller movement  
+- `Q / E` keys → Simulate height  
+- `WASD + Mouse` → Move around and look
 
-Toggle Simulator:
-Enable during development
+### Toggle XR Simulator:
+- Enabled by default for development
+- **Disable for production builds** to show full VR avatars
 
-Disable before production to show full VR avatars
+To toggle manually:
+- Locate the **XR Device Simulator** GameObject in the Hierarchy
+- Enable or disable it as needed
 
-To toggle:
+---
 
-Locate XR Device Simulator GameObject in the hierarchy
+## 📝 4. Set Unique Room Name (Multiplayer)
 
-Enable/Disable as needed
+To prevent multiplayer session overlap:
 
-📝 5. Set Unique Room Name (Multiplayer)
-To avoid collisions between multiplayer sessions:
+1. Locate the **Room Name** field in your UI or `JoinRoom.cs`
+2. Set a **unique room ID**, e.g.:
+   - `GameSession_101`
+   - `MysteryIsland_Level3`
 
-Find the Room Name input field in your Lobby UI or script (e.g., JoinRoom.cs)
+---
 
-Set a unique room ID, such as:
+## 🎮 5. Build Settings Configuration
 
-GameSession_101
+### 🌐 A. WebGL Build
+1. Go to `File > Build Settings`
+2. Select **WebGL** → Click **Switch Platform**
+3. Click **Build and Run** or **Build**
 
-MysteryIsland_Level3
+> No XR or simulator plugins needed for WebGL.
 
-Ensure all participants use the same ID to connect in Photon
+---
 
-🎮 6. Build Settings Configuration
-🌐 A. WebGL Build
-Go to File > Build Settings
+### 🤖 B. Android Mobile Build (Non-VR)
+1. `File > Build Settings` → Select **Android** → **Switch Platform**
+2. Go to `Edit > Project Settings > XR Plug-in Management (Android)`
+   - ❌ Uncheck **OpenXR**
+   - ❌ Uncheck **Oculus**
+3. Click **Build and Run** or **Build**
 
-Select WebGL → Click Switch Platform
+---
 
-Disable XR:
+### 🥽 C. VR Build (Meta Quest 2/3S/3)
+1. Switch platform to **Android**
+2. Go to `Edit > Project Settings > XR Plug-in Management`
+   - ✅ Enable **Oculus**
+   - ✅ Enable **Initialize XR on Startup**
+3. Connect your **Meta Quest** headset
+4. Click **Build and Run**, or generate `.apk` for sideloading
 
-Edit > Project Settings > XR Plug-in Management
+---
 
-Uncheck Initialize XR on Startup and other plugins
+## 📌 Additional Notes
 
-Ensure XR Simulator is OFF
+- ✅ **Disable XR Simulator** before final builds  
+- ✅ **Update Room ID** for each game/level to isolate multiplayer sessions  
+- 🔁 **Test UI and interaction scaling** separately for Android, WebGL, and VR  
+- 📦 To **optimize build size**:
+  - Remove unused assets
+  - Strip debug symbols
+  - Use **LZ4HC compression** (Player Settings → Publishing Settings)
 
-Click Build and Run or Build
+---
 
-🤖 B. Android Build (Non-VR)
-Go to File > Build Settings
+## 📂 Recommended Folder Structure (Optional)
 
-Select Android → Click Switch Platform
-
-In XR Plug-in Management (Android tab), Uncheck:
-
-OpenXR
-
-Oculus
-
-In Player Settings > Resolution and Presentation, configure:
-
-Company Name
-
-Package Name (e.g., com.guruvr.project)
-
-Click Build or Build and Run
-
-🥽 C. VR Build (Meta Quest / Android VR)
-Switch platform to Android
-
-Go to Edit > Project Settings > XR Plug-in Management
-
-✅ Enable: OpenXR
-
-✅ Enable: Initialize XR on Startup
-
-Under OpenXR settings: Set Oculus as runtime
-
-Go to Player Settings > Other Settings:
-
-Set Minimum API Level to Android 10+
-
-Use Graphics API: Vulkan or OpenGLES3
-
-Click Build to generate an .apk for sideloading onto Meta Quest
-
-📌 Additional Notes
-✅ Disable XR Simulator for production builds
-✅ Update Room ID uniquely per game/level
-🔁 Test UI scaling & interaction separately for Android, WebGL, and VR
-📦 Optimize build size:
-
-Remove unused assets
-
-Strip debug symbols
-
-Use LZ4HC compression in Player Settings
-
-📂 Recommended Folder Structure (Optional)
-Copy
-Edit
-GuruVRProject/
-├── Assets/
-│   ├── Photon/
-│   ├── XR/
-│   ├── UI/
-│   ├── Scripts/
-│   └── Scenes/
-├── ProjectSettings/
-├── Packages/
-└── README.md
