@@ -14,7 +14,7 @@ Whether you're building a collaborative educational platform, a training simulat
 
 ---
 
-## 🗂️ 1. Extract Project Files
+## 🗂️ 1. Download & Extract Project Files
 
 You will receive the project in `.zip` format.
 
