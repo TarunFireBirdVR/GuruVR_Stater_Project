@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameVersion: 1.0
-  roomName: UniqueRoomName
+  roomName: Room
   maxPlayers: 4
   autoJoinLobby: 1
   mobilePlayerPrefab: {fileID: 9032909991353006913, guid: 25f65e6b3aada4145ac6449d05de3c75, type: 3}
@@ -1556,7 +1556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
