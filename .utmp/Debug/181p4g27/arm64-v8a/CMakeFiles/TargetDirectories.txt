@@ -1,0 +1,5 @@
+D:/GuruVR Project Stater/GuruVR_Stater_Project/.utmp/Debug/181p4g27/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/GuruVR Project Stater/GuruVR_Stater_Project/.utmp/Debug/181p4g27/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/GuruVR Project Stater/GuruVR_Stater_Project/.utmp/Debug/181p4g27/arm64-v8a/GameActivity/CMakeFiles/game.dir
+D:/GuruVR Project Stater/GuruVR_Stater_Project/.utmp/Debug/181p4g27/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+D:/GuruVR Project Stater/GuruVR_Stater_Project/.utmp/Debug/181p4g27/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

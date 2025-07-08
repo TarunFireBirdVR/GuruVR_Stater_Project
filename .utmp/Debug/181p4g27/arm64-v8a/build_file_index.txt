@@ -1,0 +1,2 @@
+D:\GuruVR Project Stater\GuruVR_Stater_Project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+D:\GuruVR Project Stater\GuruVR_Stater_Project\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
